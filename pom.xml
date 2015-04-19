@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.springframework.samples.service.service</groupId>
+  <artifactId>BattleWiki</artifactId>
+  <version>0.1</version>
+  <packaging>war</packaging>
+<parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.2.3.RELEASE</version>
+</parent>
+    <properties>
+		 <start-class>com.memoryfactory.Application</start-class>
+		 <java.version>1.8</java.version>
+		 <postgresql-version>9.3-1100-jdbc41</postgresql-version>
+		 <javaxpersistence-version>1.0.2</javaxpersistence-version>
+		 <beanio-version>2.1.0</beanio-version>
+		 <commonsfileupload-version>1.3.1</commonsfileupload-version>
+		 <commonsio-version>2.4</commonsio-version> 
+		 <apacheds-version>1.5.5</apacheds-version>
+		 <geotools.version>12-RC1</geotools.version>
+		 <hazelcast.version>3.4.1</hazelcast.version>
+	</properties>
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      			<groupId>org.springframework.boot</groupId>
+      			<artifactId>spring-boot-starter-tomcat</artifactId>
+      			<scope>provided</scope>
+  		</dependency>
+  <dependency>
+    			<groupId>javax.servlet</groupId>
+    			<artifactId>jstl</artifactId>
+    		</dependency> 
+            <!-- tag::actuator[] -->
+             <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+            </dependency> 
+            <!-- end::actuator[] -->
+  
+        	<dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-rest</artifactId>
+            </dependency>
+<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+    	<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
+        </dependency>
+        <!-- PostgreSQL Driver -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgresql-version}</version>
+		</dependency>
+		<!-- JPA -->
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
+			<version>${javaxpersistence-version}</version>
+		</dependency>
+		<!-- Test Artifacts -->
+    	<dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-starter-test</artifactId>
+        	<scope>test</scope>
+    	</dependency>
+</dependencies>
+       <build>
+          <plugins>
+              <plugin>
+                  <groupId>org.springframework.boot</groupId>
+                  <artifactId>spring-boot-maven-plugin</artifactId>
+              </plugin>
+
+          </plugins>
+      </build> 
+  </project>
